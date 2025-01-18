@@ -54,6 +54,7 @@ button {
 button:hover {
     background-color: hsl(200, 70%, 45%);
     transform: scale(1.03);
+    cursor: pointer;
 }
 
 h1,h2,h3,h4,h5,h6,p{
