@@ -1,12 +1,14 @@
 body{
+    background-image: url("gorod_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #2b2b2b;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background: linear-gradient(145deg, #1e1e1e, #3c3c3c);
     color: #e0e0e0;
 }
 
@@ -41,9 +43,9 @@ body{
 }
 
 button {
-    border: blue;
+    border: rgb(250, 15, 15);
     border-radius: 20px;
-    background-color: hsl(200, 70%, 50%);
+    background-color: hsl(0, 77%, 51%);
     border: none;
     padding: 15px;
     font-size: 1.1rem;
@@ -52,7 +54,7 @@ button {
 }
 
 button:hover {
-    background-color: hsl(200, 70%, 45%);
+    background-color: hsl(0, 93%, 56%);
     transform: scale(1.03);
     cursor: pointer;
 }
@@ -63,15 +65,22 @@ h1,h2,h3,h4,h5,h6,p{
 
 h1 {
     font-size: 2.5rem;
-    color: #f5f5f5;
-    margin-bottom: 10px;
+    display: inline-block;
+    background: #000000;
+    color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    margin: 0;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 p {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: #bdbdbd;
+    color: #ff9900;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 10px 10px;
 }
 
 h3 {
