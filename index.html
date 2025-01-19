@@ -1,32 +1,25 @@
-const buttons = document.querySelectorAll(".all button");
-const bombList = document.getElementById("bomb_list");
-const bombOrder = [];
-
-buttons.forEach((button) => {
-    button.addEventListener("click", () => pressed(button));
-});
-
-function pressed(button) {
-    if (bombOrder.includes(button.id)) return;
-
-    bombOrder.push(button.id);
-    button.style.backgroundColor = "darkgray";
-    button.disabled = true;
-
-    displayList(button.id);
-}
-
-function displayList(buttonId) {
-    const displayNames = {
-        "dragon_command": "Dragon Command",
-        "tank_station": "Tank Station",
-        "infirmary": "Infirmary",
-        "armoury": "Armoury",
-        "supply_depot": "Supply Depot",
-        "dept_store": "Dept. Store"
-    };
-
-    const listItem = document.createElement("li");
-    listItem.textContent = `${displayNames[buttonId]}`;
-    bombList.appendChild(listItem);
-}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <h1>ㅤGorod Krovi Bomb Stepㅤ</h1><br><br>
+        <p>Simple tracker for the bomb-step in Gorod Krovi's Easter Egg.</p>
+        <div class="all">
+        <button id = "dragon_command">Dragon Command</button>
+        <div class = "row">
+            <button id="tank_station">Tank Station</button>
+            <button id="infirmary">Infirmary</button>
+            <button id="armoury">Armoury</button>
+            <button id="supply_depot">Supply Depot</button>
+        </div>
+        <button id="dept_store">Dept. Store</button>
+        </div>
+        <br>
+        <h3>Bomb Order:</h3>
+        <ol id="bomb_list"></ol>
+        <br><p><b>Made By: PTG PrepBox1</b></p>
+    </body>
+</html>
